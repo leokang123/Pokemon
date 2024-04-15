@@ -928,7 +928,7 @@ BACK:
     int type = 0;
     int sel2 = 0;
     refresh();
-    int sel = arrowFunc(0,line++,ST,ED,7,L"모험", L"상점", L"포켓몬센터", L"도감",L"출전순서",L"저장", L"나가기");
+    int sel = arrowFunc(0,line++,ST,ED,7,L"모험", L"상점", L"센터", L"도감",L"출전순서",L"저장", L"나가기");
     switch (sel) {
         case 0:
             line++;
