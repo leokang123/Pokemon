@@ -28,7 +28,7 @@ int startPage (struct foo * arg) {
 
     sleep(2);
     arg->x = 0;
-    arg->speed = 2.0f;
+    arg->speed = 2.1f;
     strcpy(arg->file,TITLESOUND);
     pthread_create(&tid,NULL,(void *)loopSound,arg);
     dynamicClear(3,line,LINES);
@@ -221,7 +221,7 @@ int battlePage(Userdata * user, Userdata* opp, PokeData * enemy, struct foo * ar
     // 배경음악 초기화 
     arg->x = 0;
     strcpy(arg->file,BATTLESOUND);
-    arg->speed = 2.0f;
+    arg->speed = 2.1f;
 
     if(user->progress == 4 || user->progress == 5 ||user->progress == 6)
         strcpy(arg->file,FINALBATTLESOUND);
@@ -712,13 +712,13 @@ void healCenter(Userdata * user,struct foo * arg,struct foo * arg2) {
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
     int sel = 0;
     arg2->x = 0;
-    arg2->speed = 2.0f;
+    arg2->speed = 2.1f;
     strcpy(arg2->file,HEALSOUND);
 
     arg->x = 10;
     napms(100);
     arg->x = 0;
-    arg->speed = 2.0f;
+    arg->speed = 2.1f;
     strcpy(arg->file,POKECENTERSOUND);
     pthread_create(&tid,&attr,loopSound,arg);
     clear();
@@ -772,7 +772,7 @@ void pokeShop(Userdata * user,struct foo * arg, struct foo * arg2) {
     arg->x = 10;
     napms(100);
     arg->x = 0;
-    arg->speed = 2.0f;
+    arg->speed = 2.1f;
     strcpy(arg->file,POKESHOPSOUND);
     pthread_create(&tid,&attr,loopSound,arg);
 
@@ -1020,7 +1020,7 @@ void endCredit(PokeList * list, struct foo * arg) {
     arg->x = 10;
     napms(200);
     pthread_t tid;
-    arg->speed = 2.0f;
+    arg->speed = 2.1f;
     strcpy(arg->file,ENDINGSOUND);
     pthread_create(&tid,NULL,singleSound,arg);
     while(arg->x != 1){}
