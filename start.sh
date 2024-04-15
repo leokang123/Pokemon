@@ -7,7 +7,7 @@ dpkg -s libopenal-dev > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "libopenal-dev Package is not Downloaded yet. Continue Downloading."
     sudo apt-get update
-    sudo apt-get install libopenal-dev
+    sudo apt-get install -y libopenal-dev
 else
     echo "libopenal-dev is already Downloaded"
 fi
@@ -18,7 +18,7 @@ dpkg -s libncursesw5-dev > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "libncursesw5-dev is not Downloaded yet. Continue Downloading."
     sudo apt-get update
-    sudo apt-get install libncursesw5-dev
+    sudo apt-get install -y libncursesw5-dev
 else
     echo "libncursesw5-dev is already Downloaded"
 fi
