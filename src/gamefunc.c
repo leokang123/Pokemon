@@ -366,7 +366,7 @@ int catchPokemmon(Userdata *user, PokeData *poke, int innersel, struct foo * arg
 void randomCry(struct foo * arg2) {
     pthread_t tid;
     arg2->x = 0;
-    arg2->speed = 0.3f;
+    arg2->speed = 0.1f;
     int sel = randomInRange(1,12);
     switch(sel) {
         case 1:

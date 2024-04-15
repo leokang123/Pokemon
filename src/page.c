@@ -433,7 +433,7 @@ BACK:
                         serialScreen(line++,ST,tempbuf,NORMAL);
                         wmemset(tempbuf,0,100);
                         visualgetch();
-                        skillSound(&(curPokemon->skillarr[innersel]),arg2);
+                        if(effect >= 0) skillSound(&(curPokemon->skillarr[innersel]),arg2);
                         if(epro < 13) {
                             serialScreen(line++,ST,L"적 포켓몬이 공격을 회피했다!",NORMAL);
                             turn = !turn;
@@ -594,7 +594,7 @@ BACK:
             visualgetch();
             // mvprintw(line++,ST,"HERE5 %d", ensel);  
             refresh();
-            skillSound(&(enemy->skillarr[ensel]),arg2);
+            if(effect >= 0) skillSound(&(enemy->skillarr[ensel]),arg2);
             // mvprintw(line++,ST,"HERE6");  
             refresh();
             if(epro < 10) {
