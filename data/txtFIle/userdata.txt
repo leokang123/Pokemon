@@ -1,0 +1,16 @@
+<::leokang
+progress 0
+pokemon 3:1 3 7
+detail default 11 150/default 14 200/default 20 50
+skill 3:1 15 2 7 3 8/3 4 15 5 7 6 8/4 7 15 8 7 9 8 10 10
+balance 10000
+item heal 3 drug 3 ball1 5 ball2 0 ball3 0
+<::END
+<::qwerty
+progress 3
+pokemon 3:2 4 11
+detail pica 11 150 100 / boolshit 14 200 150 / perfect 20 250 200
+skill 1 3 5 : 15 7 8 / 2 4 6 : 15 8 7 / 3 5 7 9 : 15 8 7 9
+balance 13000
+item heal 1 drug 2 ball1 2 ball2 4 ball3 0
+<::END

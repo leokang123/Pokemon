@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "progress.h": "c",
+        "everyheader.h": "c",
+        "ncurses.h": "c",
+        "wchar.h": "c",
+        "curses.h": "c",
+        "func.h": "c",
+        "string.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "time.h": "c"
+    }
+}
