@@ -18,21 +18,15 @@ C 언어로 포켓몬 게임 만들기 프로젝트
 
 외부 라이브러리 ncursesw, openal 
 
+./start.sh 실행시 libopenal-dev, libncursesw5-dev 를 다운받고 실행파일 실행시킨다
+
 ncursesw : 화면 출력을 더 보기좋고 원활하게 해줌 mvprintw, printw, move 등 
-커서를 내가 원하는 곳에 위치 시키고 출력시킬수 있음, 콘솔라인 게임 개발에 있어 가장 유용하게 썼음 
-[기본적으로 리눅스환경에 깔려있는데]
-[없을시]
-sudo apt-get update
-sudo apt-get install libncurses5-dev libncursesw5-dev
+커서를 내가 원하는 곳에 위치 시키고 출력시킬수 있음, 콘솔라인 게임 개발에 있어 가장 유용하게 썼다
 
 openal : 오디오와 관련된 라이브러리로 C에서 음악관련된 작업을 하게 도와줬다 피치를 높여 속도를 조절할수 있고 
-여러므로 C에서 느끼기 힘든 신기한 경험을 했다 (다운로드 필요)
-[다운로드 필요]
-sudo apt-get update
-sudo apt-get install libopenal-dev
+여러므로 C에서 느끼기 힘든 신기한 경험을 했다 
 
 pthread : 외부라이브러리는 아니지만 컴파일시에 따로 위의 라이브러리들과 같이 옵션 링크를 걸어줘야 한다
 
-터미널 글자크기를 좀 축소시키고 하는게 좋음 (터미널 설정 -> 돋보기 -)
+터미널 글자크기를 좀 축소시키고 하는게 좋다 (터미널 설정 -> 돋보기 -)
 아마 리눅스서버에서 실행하면 글씨가 깨질거임, 서버를 ssh로 연결하거나 리눅스 데스크탑 버전에서 실행해야함 
-src파일에서 make 후 tstart파일 실행하면 됌 
