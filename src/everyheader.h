@@ -5,7 +5,7 @@
     #define _XOPEN_SOURCE 500
 #endif
 
-int line;
+#include "../include/globalVari.h"
 #include "../include/func.h"
 #include "../include/progress.h"
 #include "../include/screen.h"
