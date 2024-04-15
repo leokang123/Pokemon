@@ -18,6 +18,6 @@ void * inputlenRange(void);
 void blinkString(wchar_t *str, int bline);
 
 /* line 의 row에서 col ~ col2까지 args 갯수만큼 균일하게 선택창을 만드는 함수  */
-int arrowFunc(int type, int line, int col, int col2, int args, ...);
+int arrowFunc(int type, int line1, int col, int col2, int args, ...);
 
 void visualgetch();
