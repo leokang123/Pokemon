@@ -6,7 +6,7 @@ void levelup(PokeData * pokemon) {
     pthread_attr_init(&attr);
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
     wchar_t *tempbuf = (wchar_t *)malloc(sizeof(wchar_t) * 100);
-    struct foo * arg2 = (struct foo *)malloc(sizeof(arg2));
+    struct foo * arg2 = (struct foo *)malloc(sizeof(struct foo));
 
     arg2->x = 0;
     arg2->speed = 3.0f;
