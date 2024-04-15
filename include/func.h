@@ -1,7 +1,7 @@
 #pragma once 
 
 #include <stdio.h>
-#include <ncurses.h>
+#include <ncursesw/curses.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
