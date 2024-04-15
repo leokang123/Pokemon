@@ -712,13 +712,13 @@ void healCenter(Userdata * user,struct foo * arg,struct foo * arg2) {
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
     int sel = 0;
     arg2->x = 0;
-    arg2->speed = 2.25f;
+    arg2->speed = 2.3f;
     strcpy(arg2->file,HEALSOUND);
 
     arg->x = 10;
     napms(100);
     arg->x = 0;
-    arg->speed = 2.3f;
+    arg->speed = 2.2f;
     strcpy(arg->file,POKECENTERSOUND);
     pthread_create(&tid,&attr,loopSound,arg);
     clear();
@@ -921,6 +921,7 @@ int menuPage(Userdata * user, PokeList * list, int (*ftr)(Userdata *, PokeList*,
     arg->x = 10;
 BACK:
     clear();
+    mvprintw(10,ST,"%ls가 현재까지 진행한 상황: %d",user->username, user->progress);
     pokeImage1(2, (ST+ED)/2 - 35, 28);
     if(arg->x != 1) randomCity(arg);
     line = 15;
