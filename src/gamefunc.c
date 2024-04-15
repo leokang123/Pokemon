@@ -348,7 +348,7 @@ int catchPokemmon(Userdata *user, PokeData *poke, int innersel, struct foo * arg
     }
     else {
         arg2->x = 0;
-        arg2->speed = 2.0f;
+        arg2->speed = 2.2f;
         strcpy(arg2->file,POPPOKEMONSOUND);
         q = (innersel > 1)? L"하이퍼 볼" : (innersel > 0)? L"슈퍼 볼" : L"몬스터 볼";
         wmemset(tempbuf,0,200);
@@ -416,7 +416,7 @@ void randomCity(struct foo * arg) {
     arg->x = 10;
     pthread_t tid;
     int a = randomInRange(1,3);
-    arg->speed = 2.0f;
+    arg->speed = 2.2f;
     arg->x = 0;
     switch(a) {
         case 1:
