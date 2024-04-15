@@ -1,7 +1,6 @@
 #pragma once 
 
 
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -15,6 +14,8 @@
 #define PGDSTRUCT_SIZE sizeof(PokeGlobalData)
 
 #define NAME_SIZE 40
+
+extern int line;
 
 struct battleInter {
     int interCol;

@@ -16,7 +16,7 @@
 #define SELECT      COLOR_PAIR(2)
 #define ST          2 * COLS/13.0
 #define ED          11 * COLS/13.0
-int line;
+extern int line;
 
 void endRoutine(int lines);
 void lineControl();
