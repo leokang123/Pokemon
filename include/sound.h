@@ -71,8 +71,6 @@
 #define HALLOFFAMESOUND         "../assets/backSound/halloffame.wav"
 #define ENDINGSOUND             "../assets/backSound/ending.wav"
 
-extern int line;
-
 struct foo {
     char file[100];
     int x;

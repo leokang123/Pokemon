@@ -12,3 +12,5 @@
 #include "../include/sound.h"
 #include "../include/page.h"
 #include "../include/gamefunc.h"
+
+extern int line;
