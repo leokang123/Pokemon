@@ -1,5 +1,6 @@
 // #include "../../src/everyheader.h"
 #include "../src/everyheader.h"
+extern int line;
 
 /*
   걍 모든 print함수에서 개행문자 들어가면 그 줄은 flush되서 빈공간으로 남는다고 생각하자 

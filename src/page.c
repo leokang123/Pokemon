@@ -1,4 +1,5 @@
 #include "everyheader.h"
+extern int line;
 
 int startPage (struct foo * arg) {
     pthread_t tid;

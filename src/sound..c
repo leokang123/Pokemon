@@ -1,5 +1,6 @@
 // #include "../../src/everyheader.h"
 #include "../src/everyheader.h"
+extern int line;
 
 
 /* 아마 소리를 첨에 넣는다면 

@@ -1,5 +1,6 @@
 // #include "../../src/everyheader.h"
 #include "../src/everyheader.h"
+extern int line;
 
 
 /* first ~ last 사이 랜덤값 반환 */

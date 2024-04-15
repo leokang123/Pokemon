@@ -1,4 +1,5 @@
 #include "everyheader.h"
+extern int line;
 
 void levelup(PokeData * pokemon) {
     pthread_t tid2;
