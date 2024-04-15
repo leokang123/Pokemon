@@ -27,23 +27,18 @@ int main (void) {
     // cbreak();
     // keypad(stdscr, TRUE); // 특수 키를 처리하기 위해 키패드 활성화 (강종키 안댐 아마 다른키가있을듯)
 
-    // 반드시 속성 구조체를 초기화 해줘야 한다 
-    // pthread_t tid;
-    // pthread_attr_t attr;
-    // pthread_attr_init(&attr);
-    // pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
     struct foo * arg = (struct foo*)malloc(sizeof(struct foo));       // 배경음을 메인에서 조정하기 위함 
-    struct foo * arg2 = (struct foo*)malloc(sizeof(struct foo));    // 부가음을 메인에서 조정하기 위함(원래는 개별함수에서 각각하려했는데 그럼 할당해제가 너무 애매해짐)
+    struct foo * arg2 = (struct foo*)malloc(sizeof(struct foo));    // 부가적인 소리를 메인에서 조정하기 위함(원래는 개별함수에서 각각하려했는데 그럼 할당해제가 너무 애매해짐)
     line = LINES/2 - 10;
     refresh();
     PokeList * list = makeLink();
     Userdata * user;
     
     // 시작 페이지 
-    // int sel = startPage(arg);    // debug1
+    int sel = startPage(arg);    // debug1
 
     // 사용자정보 로드 페이지 
-    int sel = 1;            // debug2
+    // int sel = 1;            // debug2
     user = (sel)? loadUserPage(arg) : makeUserPage(list, arg);
     if(user == NULL) {
         clear();
