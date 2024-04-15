@@ -718,7 +718,7 @@ void healCenter(Userdata * user,struct foo * arg,struct foo * arg2) {
     arg->x = 10;
     napms(100);
     arg->x = 0;
-    arg->speed = 2.6f;
+    arg->speed = 2.3f;
     strcpy(arg->file,POKECENTERSOUND);
     pthread_create(&tid,&attr,loopSound,arg);
     clear();
