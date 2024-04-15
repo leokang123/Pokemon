@@ -5,11 +5,10 @@
     #define _XOPEN_SOURCE 500
 #endif
 
+int line;
 #include "../include/func.h"
 #include "../include/progress.h"
 #include "../include/screen.h"
 #include "../include/sound.h"
 #include "../include/page.h"
 #include "../include/gamefunc.h"
-
-int line;

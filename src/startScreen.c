@@ -1,7 +1,5 @@
 #include "everyheader.h"
 
-
-int line;
 // 형 명시하고 사용해야 함 
 
 int main (void) {

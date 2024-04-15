@@ -1,7 +1,6 @@
 #pragma once
 
 #include "progress.h"
-extern int line;
 
 int startPage (struct foo * arg);
 
