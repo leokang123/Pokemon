@@ -442,7 +442,7 @@ int story0(Userdata* user, PokeList * list, struct foo * arg,struct foo* arg2) {
     user->progress = 0;
     // user->item.ball3 = 10;
     type = battlePage(user,NULL,enemy,arg,arg2);
-    if(type == 1) user->progress = 1;
+    if(type == 1 && user->progress < 1) user->progress = 1;
     free(enemy);
     return type;
 }
@@ -459,7 +459,7 @@ int story1(Userdata* user, PokeList * list, struct foo * arg,struct foo* arg2) {
     user->progress = 1;
     // user->item.ball3 = 10;
     type = battlePage(user,user2,NULL,arg,arg2);
-    if(type == 1) user->progress = 2;
+    if(type == 1 && user->progress < 2) user->progress = 2;
     free(user2);
     free(enemy1);
     free(enemy2);
@@ -481,7 +481,7 @@ int story2(Userdata* user, PokeList * list, struct foo * arg,struct foo* arg2) {
     user->progress = 2;
     // user->item.ball3 = 10;
     type = battlePage(user,user2,NULL,arg,arg2);
-    if(type == 1) user->progress = 3;
+    if(type == 1 && user->progress < 3) user->progress = 3;
     free(user2);
     free(enemy1);
     free(enemy2);
@@ -504,7 +504,7 @@ int story3(Userdata* user, PokeList * list, struct foo * arg,struct foo* arg2) {
     user->progress = 3;
     // user->item.ball3 = 10;
     type = battlePage(user,user2,NULL,arg,arg2);
-    if(type == 1) user->progress = 4;
+    if(type == 1 && user->progress < 4) user->progress = 4;
     free(user2);
     free(enemy1);
     free(enemy2);
@@ -525,7 +525,7 @@ int story4(Userdata* user, PokeList * list, struct foo * arg,struct foo* arg2) {
     user->progress = 4;
     // user->item.ball3 = 10;
     type = battlePage(user,user2,NULL,arg,arg2);
-    if(type == 1) {
+    if(type == 1 && user->progress < 5) {
         user->progress = 5;
         endCredit(list,arg);
     }
@@ -542,7 +542,7 @@ int story5(Userdata* user, PokeList * list, struct foo * arg,struct foo* arg2) {
     PokeData * enemy = setRandomPoke(list,24,24,4,1);
     user->progress = 5;
     type = battlePage(user,NULL,enemy,arg,arg2);
-    if(type == 1) user->progress = 6;
+    if(type == 1 && user->progress < 6) user->progress = 6;
     free(enemy);
     return type;
 
@@ -555,7 +555,7 @@ int story6(Userdata* user, PokeList * list, struct foo * arg,struct foo* arg2) {
     PokeData * enemy = setRandomPoke(list,25,25,4,1);
     user->progress = 6;
     type = battlePage(user,NULL,enemy,arg,arg2);
-    if(type == 1) user->progress = 6;
+    if(type == 1 && user->progress < 6) user->progress = 6;
     free(enemy);
     return type;
 }
