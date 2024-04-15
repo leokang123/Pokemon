@@ -1,7 +1,7 @@
 #include "everyheader.h"
-extern int line;
 
 // 형 명시하고 사용해야 함 
+int line;
 
 int main (void) {
     srand(time(NULL));

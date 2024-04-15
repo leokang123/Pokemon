@@ -9,7 +9,6 @@
 */
 
 // Userdata *readUserData(const char *filename, char * userName) {
-extern int line;
 
 Userdata *readUserData(wchar_t * userName) {
     // const char * filename = "../../data/userData/userdata.bin";   // test 디렉토리용 

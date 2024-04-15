@@ -5,7 +5,6 @@
     #define _XOPEN_SOURCE 500
 #endif
 
-#include "../include/globalVari.h"
 #include "../include/func.h"
 #include "../include/progress.h"
 #include "../include/screen.h"
@@ -13,3 +12,4 @@
 #include "../include/page.h"
 #include "../include/gamefunc.h"
 
+extern int line;

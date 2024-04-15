@@ -25,5 +25,5 @@ int pokeImage1(int imline, int imcol, int num);
 int pokeImage2(int imline, int imcol, int num);
 void randomScreen(void); 
 void dynamicClear(int type, int start, int num);
-void borderLine(int line, int st, int ed);
+void borderLine(int line1, int st, int ed);
 void staticClear(int line1, int line2, int col1, int col2);
