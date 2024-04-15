@@ -221,7 +221,7 @@ int battlePage(Userdata * user, Userdata* opp, PokeData * enemy, struct foo * ar
     // 배경음악 초기화 
     arg->x = 0;
     strcpy(arg->file,BATTLESOUND);
-    arg->speed = 2.1f;
+    arg->speed = 1.9f;
 
     if(user->progress == 4 || user->progress == 5 ||user->progress == 6)
         strcpy(arg->file,FINALBATTLESOUND);
@@ -718,7 +718,7 @@ void healCenter(Userdata * user,struct foo * arg,struct foo * arg2) {
     arg->x = 10;
     napms(100);
     arg->x = 0;
-    arg->speed = 2.1f;
+    arg->speed = 1.9f;
     strcpy(arg->file,POKECENTERSOUND);
     pthread_create(&tid,&attr,loopSound,arg);
     clear();
