@@ -737,7 +737,6 @@ void healCenter(Userdata * user,struct foo * arg,struct foo * arg2) {
         serialScreen(line++,ST,L"안녕히 가세요",NORMAL);
         visualgetch();
         arg->x = 10;
-        free(arg2);
         return ;
     }
     refresh();
