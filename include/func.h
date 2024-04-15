@@ -7,9 +7,10 @@
 #include <time.h>
 #include <stdarg.h>
 #include <string.h>
-
+extern int line;
 #define DEFAULT COLOR_PAIR(1) 
 #define SELECT COLOR_PAIR(2)
+
 /* first ~ last 사이 랜덤값 반환 */
 int randomInRange(int first, int last);
 

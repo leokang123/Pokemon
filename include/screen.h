@@ -17,6 +17,7 @@
 #define ST          2 * COLS/13.0
 #define ED          11 * COLS/13.0
 
+extern int line;
 
 void endRoutine(int lines);
 void lineControl();

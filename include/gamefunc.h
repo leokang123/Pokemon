@@ -2,6 +2,8 @@
 
 #include "progress.h"
 
+extern int line;
+
 void learnSkill(PokeData * pokemon);
 
 void levelup(PokeData * pokemon);

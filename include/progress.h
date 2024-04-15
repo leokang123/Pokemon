@@ -15,7 +15,7 @@
 
 #define NAME_SIZE 40
 
-
+extern int line;
 
 struct battleInter {
     int interCol;
