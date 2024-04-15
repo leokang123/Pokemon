@@ -130,6 +130,3 @@ void saveSkills(Skill *Skills, int count);
 
 // 스킬정보 다 받아오는 함수 
 Skill *readSkills(void);
-
-void learnSkill(PokeData * pokemon);
-void levelup(PokeData * pokemon);
