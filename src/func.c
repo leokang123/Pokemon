@@ -59,7 +59,7 @@ void blinkString(wchar_t *str, int bline) {
     type 0 : 수평하게 , type 1: 수직하게, type 2 : 2xn 하게 
 */
 
-int arrowFunc(int type, int line, int col, int col2, int args, ...){
+int arrowFunc(int type, int line1, int col, int col2, int args, ...){
     noecho(); // 입력한 문자가 화면에 표시되지 않도록 설정
     keypad(stdscr, TRUE); // 특수 키를 사용할 수 있도록 설정
     // 초기 배경 색상 설정
@@ -103,18 +103,18 @@ int arrowFunc(int type, int line, int col, int col2, int args, ...){
 
         while (ch != 10) {
             for(int i = 0 ; i < args ; i++) {
-                mvprintw(line,gap[i],"%ls", arr[i]);
+                mvprintw(line1,gap[i],"%ls", arr[i]);
             }
             refresh();
             for(int i = 0 ; i < args ; i++) {
                 if(a != i) continue;
                 attron(DEFAULT);
-                mvprintw(line,gap[(i-1 + args) % args]-1 ," %ls", arr[(i-1 + args) % args]);
-                mvprintw(line,gap[(i+1 + args) % args]-1 ," %ls", arr[(i+1 + args) % args]);
+                mvprintw(line1,gap[(i-1 + args) % args]-1 ," %ls", arr[(i-1 + args) % args]);
+                mvprintw(line1,gap[(i+1 + args) % args]-1 ," %ls", arr[(i+1 + args) % args]);
                 attroff(DEFAULT);
 
                 attron(SELECT);
-                mvprintw(line,gap[i]-1,">%ls", arr[i]);
+                mvprintw(line1,gap[i]-1,">%ls", arr[i]);
                 attroff(SELECT);
                 refresh();
             }
@@ -134,7 +134,7 @@ int arrowFunc(int type, int line, int col, int col2, int args, ...){
 
         while (ch != 10) {
             for(int i = 0 ; i < args ; i++) {
-                gap[i] = line + i;
+                gap[i] = line1 + i;
                 mvprintw(gap[i],col,"%ls", arr[i]);
             }
             refresh();
@@ -161,18 +161,18 @@ int arrowFunc(int type, int line, int col, int col2, int args, ...){
             while(arg->x != 1) {}          
         }
     }
-    // mvprintw(line++,ST,"HERE");
+    // mvprintw(line1++,ST,"HERE");
     // refresh();
     for(int i = 0 ; i < args ; i++) free((wchar_t*)arr[i]);
     free((wchar_t*)arr);
-    // mvprintw(line++,ST,"HERE");
+    // mvprintw(line1++,ST,"HERE");
     // refresh();
     // free((int*)gap);
 
     while(arg->x != 10) {}
 
     free((struct foo*)arg);
-    // mvprintw(line++,ST,"HERE");
+    // mvprintw(line1++,ST,"HERE");
     // refresh();
     keypad(stdscr, FALSE); 
     echo();
@@ -193,7 +193,7 @@ void visualgetch(){
     //     int x = p + 1;               // 양옆 열간 간격 맞춰주기 위해 씀 
     //     while (ch != 10) {
     //         for(int i = 0 ; i < args ; i++) {
-    //             gap2[i][0] = (i/p) * resizeCol/9.0/2 + line;
+    //             gap2[i][0] = (i/p) * resizeCol/9.0/2 + line1;
     //             gap2[i][1] = ((i%p)+1) * resizeCol/x + col;
     //             mvprintw(gap2[i][0],gap2[i][1],"%ls", arr[i]);
     //         }
