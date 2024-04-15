@@ -124,9 +124,7 @@ int arrowFunc(int type, int line1, int col, int col2, int args, ...){
             else if(ch == 10) {}
             else continue;
             arg->x = 0;
-            pthread_create(&tid,NULL,singleSound,arg);
-            while (arg->x != 1) {}
-            
+            pthread_create(&tid,NULL,singleSound,arg);            
         }
     }
     if(type == 1) {
@@ -157,7 +155,6 @@ int arrowFunc(int type, int line1, int col, int col2, int args, ...){
             else if(ch == 10) {}
             else continue;
             pthread_create(&tid,NULL,singleSound,arg);
-            while(arg->x != 1) {}          
         }
     }
     // mvprintw(line1++,ST,"HERE");

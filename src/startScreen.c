@@ -40,10 +40,10 @@ int main (void) {
     Userdata * user;
     
     // 시작 페이지 
-    int sel = startPage(arg);    // debug1
+    // int sel = startPage(arg);    // debug1
 
     // 사용자정보 로드 페이지 
-    // int sel = 1;            // debug2
+    int sel = 1;            // debug2
     user = (sel)? loadUserPage(arg) : makeUserPage(list, arg);
     if(user == NULL) {
         clear();

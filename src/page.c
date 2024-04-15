@@ -221,7 +221,7 @@ int battlePage(Userdata * user, Userdata* opp, PokeData * enemy, struct foo * ar
     // 배경음악 초기화 
     arg->x = 0;
     strcpy(arg->file,BATTLESOUND);
-    arg->speed = 1.9f;
+    arg->speed = 2.2f;
 
     if(user->progress == 4 || user->progress == 5 ||user->progress == 6)
         strcpy(arg->file,FINALBATTLESOUND);
@@ -712,13 +712,13 @@ void healCenter(Userdata * user,struct foo * arg,struct foo * arg2) {
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
     int sel = 0;
     arg2->x = 0;
-    arg2->speed = 2.1f;
+    arg2->speed = 2.25f;
     strcpy(arg2->file,HEALSOUND);
 
     arg->x = 10;
     napms(100);
     arg->x = 0;
-    arg->speed = 1.9f;
+    arg->speed = 2.6f;
     strcpy(arg->file,POKECENTERSOUND);
     pthread_create(&tid,&attr,loopSound,arg);
     clear();
